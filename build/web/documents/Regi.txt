@@ -1,0 +1,25 @@
+<i><h2>How to register your school?:</h2>
+<ul>
+
+<li style="font-size:25;">Click on the Registration icon on the top right side of the Home page.</br>
+<img src="/IoMS/images/ScreenShot1.png" style="width:100%;height:80px"></br></br></li>
+
+<li style="font-size:25;">Fill the Registration Form</br>
+<img src="/IoMS/images/ScreenShot2.png" style="width:100%;height:350px"></br></br></li>
+
+<li style="font-size:25;">Click on the Registration Button</br>
+<img src="/IoMS/images/ScreenShot3.png" style="width:100%;height:350px"></br></br></li>
+
+<li style="font-size:25;">Check whether you have entered all the details correctly or not.</br>
+<img src="/IoMS/images/ScreenShot4.png" style="width:100%;height:350px"></br></br></li>
+
+<li style="font-size:25;">If there are any changes click on the Back button otherwise go to the next page.
+<img src="/IoMS/images/ScreenShot5.png" style="width:100%;height:350px"></br></br></li>
+
+<li style="font-size:25;">There you go! Your school has been registered. Note down the School ID displayed on the screen.
+<img src="/IoMS/images/ScreenShot6.png" style="width:100%;height:350px"></br></br></li>
+
+</ul>
+
+
+</i>

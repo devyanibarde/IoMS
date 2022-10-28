@@ -1,0 +1,104 @@
+CREATE DATABASE `iomsdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+
+
+DROP TABLE IF EXISTS `iomsdb`.`admin`;
+CREATE TABLE  `iomsdb`.`admin` (
+  `AdminID` varchar(255) NOT NULL,
+  `Password` varchar(45) NOT NULL,
+  PRIMARY KEY (`AdminID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`classdata`;
+CREATE TABLE  `iomsdb`.`classdata` (
+  `SchID` varchar(200) NOT NULL,
+  `SecI` int(11) DEFAULT NULL,
+  `SecII` int(11) DEFAULT NULL,
+  `SecIII` int(11) DEFAULT NULL,
+  `SecIV` int(11) DEFAULT NULL,
+  `SecV` int(11) DEFAULT NULL,
+  PRIMARY KEY (`SchID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`mails`;
+CREATE TABLE  `iomsdb`.`mails` (
+  `sender` varchar(45) NOT NULL,
+  `receiver` varchar(45) DEFAULT NULL,
+  `body` varchar(200) NOT NULL,
+  `class` varchar(45) DEFAULT NULL,
+  `numofstu` varchar(45) DEFAULT NULL,
+  `type3` varchar(45) DEFAULT NULL,
+  `receivertype` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`schemes`;
+CREATE TABLE  `iomsdb`.`schemes` (
+  `name` varchar(200) NOT NULL,
+  `link` varchar(200) NOT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`school`;
+CREATE TABLE  `iomsdb`.`school` (
+  `SchoolID` varchar(255) NOT NULL,
+  `SchoolName` varchar(255) DEFAULT NULL,
+  `SchoolType` int(11) DEFAULT NULL,
+  `OrgName` varchar(255) DEFAULT NULL,
+  `StudyMedium` varchar(255) DEFAULT NULL,
+  `StudyBoard` varchar(255) DEFAULT NULL,
+  `UDISENo` varchar(255) DEFAULT NULL,
+  `StreetAddr` varchar(255) DEFAULT NULL,
+  `Addr2` varchar(255) DEFAULT NULL,
+  `City` varchar(255) DEFAULT NULL,
+  `State` varchar(255) DEFAULT NULL,
+  `PinCode` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`SchoolID`),
+  KEY `StudyMedium` (`StudyMedium`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`student`;
+CREATE TABLE  `iomsdb`.`student` (
+  `adhaarno` int(12) unsigned NOT NULL,
+  `school` varchar(45) DEFAULT NULL,
+  `class` varchar(45) DEFAULT NULL,
+  `section` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `achisport` varchar(45) DEFAULT NULL,
+  `achiacadamics` varchar(45) DEFAULT NULL,
+  `termIper` varchar(45) DEFAULT NULL,
+  `termIIper` varchar(45) DEFAULT NULL,
+  `DOB` datetime DEFAULT NULL,
+  `sportslevel` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`adhaarno`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`user`;
+CREATE TABLE  `iomsdb`.`user` (
+  `UserID` varchar(255) NOT NULL,
+  `UserType` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `mobileno` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `class` varchar(200) DEFAULT NULL,
+  `section` varchar(200) DEFAULT NULL,
+  `school` varchar(45) DEFAULT NULL,
+  `students` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`UserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `iomsdb`.`usersecurity`;
+CREATE TABLE  `iomsdb`.`usersecurity` (
+  `UserID` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `que` varchar(255) DEFAULT NULL,
+  `ans` varchar(255) DEFAULT NULL,
+  `school` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`UserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
