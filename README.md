@@ -16,4 +16,12 @@ https://tomcat.apache.org/download-10.cgi
 
 **Step 2:**
 
-You can find the .war file at the following location in this project - 
+You can find the .war file at the following location in this project - *IoMS/dist/IoMS.war*
+
+**Step 3:**
+
+Copy and paste the .war file to Tomcat's webapps directory.
+
+## Contributors:
+* Devyani Barde
+* Samiksha Bhakte
