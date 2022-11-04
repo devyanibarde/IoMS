@@ -11,7 +11,6 @@ The cons of this enrollment drive are: The data of students is difficult to hand
 **Step 1:**
 
 Download the tomcat server on your machine. Use the link given below and follow through the steps for installation -
-
 https://tomcat.apache.org/download-10.cgi
 
 **Step 2:**
